@@ -1,24 +1,14 @@
-import { Cords } from './Hooks/Cords.js'
+
+import { Navigate, Route, Routes } from 'react-router-dom'
 import { Header } from './Components/Header'
-
-const Search = () => {
-  const { searchValue, handleSumbit } = Cords()
-
-  return (
-    <>
-      <form onSubmit={handleSumbit}>
-        <input type='text' placeholder='Search...' ref={searchValue} />
-        <button type='submit'>Search</button>
-      </form>
-    </>
-  )
-}
 
 function App () {
   return (
     <>
-      <Header />
-      <Search />
+      <Navigate to='/home' />
+      <Routes>
+        <Route path='/home' element={<Header />} />
+      </Routes>
     </>
   )
 }
