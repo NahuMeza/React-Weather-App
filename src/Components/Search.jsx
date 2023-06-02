@@ -1,12 +1,12 @@
 import { useCords } from '../Hooks/useCords'
 
 export const Search = () => {
-  const { searchValue, handleSumbit } = useCords()
+  const { inputValue, handleSumbit } = useCords()
 
   return (
     <>
       <form onSubmit={handleSumbit}>
-        <input type='text' placeholder='Search...' ref={searchValue} />
+        <input type='text' placeholder='London, Paris, Córdoba...' ref={inputValue} />
         <button type='submit'>Search</button>
       </form>
     </>
