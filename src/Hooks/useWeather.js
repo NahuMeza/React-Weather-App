@@ -3,12 +3,7 @@ import { useContext, useEffect, useState } from 'react'
 
 export const useWeather = () => {
   const { cords } = useContext(CordsContext)
-  const [weatherData, setWeatherData] = useState({
-    country: '',
-    city: '',
-    weather: '',
-    temp: ''
-  })
+  const [weatherData, setWeatherData] = useState(null)
 
   useEffect(() => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${cords.lat}&lon=${cords.lon}&appid=${import.meta.env.VITE_API_KEY}`)

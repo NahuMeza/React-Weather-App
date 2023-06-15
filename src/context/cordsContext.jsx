@@ -5,8 +5,9 @@ export const CordsContext = createContext(null)
 
 export const CordsProvider = ({ children }) => {
   const [cords, setCords] = useState({})
+  const [statesName, setStatesName] = useState([])
   return (
-    <CordsContext.Provider value={{ setCords, cords }}>
+    <CordsContext.Provider value={{ setCords, cords, setStatesName, statesName }}>
       {children}
     </CordsContext.Provider>
   )
