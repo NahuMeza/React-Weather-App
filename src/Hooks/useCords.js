@@ -8,6 +8,7 @@ export function useCords () {
   const navigate = useNavigate()
 
   const getCords = () => {
+    setStatesName(null) // sets the state to null so the user receives a loading message
     fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${inputValue.current.value}&limit=5&appid=${import.meta.env.VITE_API_KEY}`)
       .then(response => response.json())
       .then(data => setStatesName(data))

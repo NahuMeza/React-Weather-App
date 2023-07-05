@@ -12,10 +12,10 @@ export const StateWeather = () => {
     <section>
       {weatherData
         ? <div>
-          <h1><span>{weatherData.city}</span>{urlParam.city}<span /></h1>
+          <h1><span>{weatherData.city}</span>{urlParam.state}<span /></h1>
           {weatherData.weather.length > 0 ? <img src={imageURL} alt='weather image' /> : <h2>Loading..</h2>}
           <h1>{JSON.stringify(weatherData)}</h1>
-        </div>
+          </div>
         : <CircularProgress />}
     </section>
   )
