@@ -20,7 +20,7 @@ export const ResultBox = ({ state }) => {
       {state.map((item) => (
         <Grid item xs={12} sm={6} md={4} lg={3} key={JSON.stringify([item.lat, item.lon])}>
           <Button variant='outlined' onClick={() => { climateCords({ cor: item }) }}>
-            {item.name}, {item.state}, {item.country}
+            <span style={{ paddingRight: '20px' }}>{item.name}, {item.state}, {item.country}</span> <img src={`https://flagcdn.com/w20/${item.country.toLowerCase()}.png`} alt='country-flag' />
           </Button>
         </Grid>
       ))}
